@@ -1,4 +1,4 @@
-# Luma Baby Spa
+# POS Baby Spa
 
 Aplikasi PHP dan MySQL untuk operasional baby spa. Membutuhkan PHP 8.1+ dengan PDO MySQL dan database MySQL/MariaDB.
 
