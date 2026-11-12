@@ -281,7 +281,7 @@ body .select2-container--default .select2-selection--single .select2-selection__
 
 .invoice-note{display:grid;gap:8px}.invoice-note .inv-head,.invoice-note .inv-body{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}.invoice-note .inv-body strong{font-family:Fraunces,serif;font-size:1.3rem}.invoice-note .inv-pay{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.65);font-size:.92rem}.invoice-note .inv-foot{font-size:.88rem;opacity:.85}
 
-.invoice .inv-pay{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--mist,#eef6f6)}details summary{cursor:pointer;margin-bottom:12px}
+.sub-invoice .inv-pay{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--mist,#eef6f6)}details summary{cursor:pointer;margin-bottom:12px}
 
 .stats.compact.auto{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
 
@@ -295,3 +295,49 @@ dialog.modal{border:0;border-radius:20px;padding:0;width:min(560px,94vw);max-hei
 .thermal .t-center{text-align:center}.thermal .t-name{font-size:15px}.thermal .t-bold{font-weight:700}.thermal .t-sub{font-size:11.5px;color:#222;padding-left:6px}
 .thermal .t-row{display:flex;justify-content:space-between;gap:8px}.thermal .t-row span:last-child{text-align:right;white-space:nowrap}
 .thermal .t-line{border-top:1px dashed #000;margin:6px 0}.thermal .t-sign{display:flex;justify-content:space-around;margin-top:8px;text-align:center}.thermal .t-sign-space{height:34px}
+
+/* ===== Invoice nota ===== */
+.invoice{--inv:#ec9a85;--inv-dark:color-mix(in srgb,var(--inv) 70%,#4a1608);--inv-t1:color-mix(in srgb,var(--inv) 24%,#fff);--inv-t2:color-mix(in srgb,var(--inv) 12%,#fff);max-width:860px;margin:0 auto 18px;background:#fff;color:#4a2a22;border:1px solid var(--line);border-radius:14px;padding:22px 24px 18px;font-size:14px;box-shadow:var(--shadow);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.invoice .inv-top{display:flex;align-items:stretch;gap:0;margin-bottom:14px}.invoice .inv-bar{flex:1;align-self:flex-end;height:14px;background:var(--inv);margin-bottom:2px;border-radius:2px}
+.invoice .inv-title{background:var(--inv);color:#fff;font-weight:800;letter-spacing:.32em;font-size:22px;padding:8px 26px 8px 40px;margin-left:-8px;clip-path:polygon(22px 0,100% 0,100% 100%,0 100%);text-transform:uppercase}
+.invoice .inv-mid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px;align-items:center}
+.invoice .inv-logo img{max-width:230px;max-height:130px;object-fit:contain;display:block}
+.invoice .inv-blob{background:var(--inv-dark);color:#fff;width:190px;min-height:130px;border-radius:58% 42% 52% 48%/55% 48% 52% 45%;display:grid;place-content:center;text-align:center;padding:20px;gap:4px}.invoice .inv-blob strong{font:800 20px/1.1 Fraunces,Georgia,serif;letter-spacing:.04em;text-transform:uppercase}.invoice .inv-blob small{font-size:11px;color:#fff;opacity:.9}
+.invoice .inv-to{display:grid;gap:6px}.invoice .inv-to>strong{font-size:16px;letter-spacing:.04em;color:#3b1f19}
+.invoice .inv-field{display:grid;grid-template-columns:104px 14px minmax(0,1fr);align-items:end;font-weight:700;color:#3b1f19}.invoice .inv-field i{font-style:normal}.invoice .inv-field em{font-style:normal;font-weight:600;border-bottom:2px dotted #3b1f19;min-height:1.3em;padding:0 4px;overflow-wrap:anywhere}
+.invoice .inv-date{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:2px solid var(--inv-t1);border-bottom:2px solid var(--inv-t1);padding:9px 4px;margin:16px 0 14px}.invoice .inv-date span{color:var(--inv);font-weight:800}.invoice .inv-date strong{color:#3b1f19}
+.invoice .inv-table{display:grid;gap:3px}
+.invoice .inv-row{display:grid;grid-template-columns:minmax(0,1fr) 56px 118px 128px;gap:8px;align-items:center}
+.invoice .inv-row>div{padding:8px 16px 8px 12px;min-height:34px;display:flex;flex-direction:column;justify-content:center;text-align:center;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%);font-weight:700}
+.invoice .inv-row.odd>div{background:var(--inv-t1)}.invoice .inv-row.even>div{background:var(--inv-t2)}
+.invoice .inv-head>div{background:var(--inv)!important;color:#fff;font-weight:800;letter-spacing:.03em}
+.invoice .inv-c-desc{text-align:center}.invoice .inv-c-desc small{display:block;font-weight:600;font-size:11.5px;color:var(--inv-dark)}
+.invoice .inv-payrow .inv-c-desc{grid-column:1/-1}.invoice .inv-payrow>div:not(.inv-c-desc){display:none}
+.invoice .inv-bottom{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:center;margin-top:16px}
+.invoice .inv-bank{border-top:2px solid var(--inv-t1);padding-top:10px;font-weight:700;color:#3b1f19;min-height:20px}.invoice .inv-bank div{font-weight:800;font-size:15px}
+.invoice .inv-grand{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--inv-t1);padding:14px 22px 14px 30px;clip-path:polygon(16px 0,100% 0,100% 100%,16px 100%,0 50%);font-weight:800;color:#3b1f19}.invoice .inv-grand strong{font-size:20px;color:var(--inv-dark)}
+.invoice .inv-foot{margin-top:14px;text-align:center;font-size:12.5px;color:#7a5a50;display:grid;gap:4px}.invoice .inv-addr{font-size:11.5px;opacity:.85}
+@media(max-width:640px){.invoice{padding:14px 12px;font-size:12.5px}.invoice .inv-mid,.invoice .inv-bottom{grid-template-columns:1fr}.invoice .inv-title{font-size:16px;padding:6px 18px 6px 30px}.invoice .inv-row{grid-template-columns:minmax(0,1fr) 30px 86px 88px;gap:4px}.invoice .inv-c-price,.invoice .inv-c-total{white-space:nowrap}.invoice .inv-row>div{padding:6px 10px 6px 6px;font-size:11.5px}.invoice .inv-field{grid-template-columns:86px 10px minmax(0,1fr)}}
+@media print{@page{margin:8mm}.invoice{box-shadow:none;border:0;max-width:none;margin:0;padding:0}.receipt-public{background:#fff!important}}
+.logo-now{display:flex;align-items:center;gap:16px}.logo-now img{max-height:70px;max-width:180px;object-fit:contain;border:1px dashed var(--line);border-radius:8px;padding:6px}
+
+.thermal .t-item{font-weight:700;margin-top:2px}.thermal .t-logo{max-height:54px;max-width:70%;filter:grayscale(1) contrast(1.2);margin:0 auto 4px;display:block}
+
+/* ===== Invoice: bentuk kolom chevron mirip contoh ===== */
+.invoice{--tip:12px}
+.invoice .inv-table{gap:2px}
+.invoice .inv-row{grid-template-columns:minmax(0,48fr) minmax(0,11fr) minmax(0,17fr) minmax(0,24fr);gap:0}
+.invoice .inv-row>div{margin:0;padding:10px 18px;min-height:40px;clip-path:polygon(0 0,calc(100% - var(--tip)) 0,100% 50%,calc(100% - var(--tip)) 100%,0 100%)}
+.invoice .inv-row>div+div{margin-left:-6px;padding-left:20px;clip-path:polygon(0 0,calc(100% - var(--tip)) 0,100% 50%,calc(100% - var(--tip)) 100%,0 100%,var(--tip) 50%)}
+.invoice .inv-head>div{font-weight:800}.invoice .inv-head>div+div{background:color-mix(in srgb,var(--inv) 80%,#fff)!important}
+.invoice .inv-payrow .inv-c-desc{grid-column:auto;color:var(--inv-dark);font-size:15px}.invoice .inv-payrow>div:not(.inv-c-desc){display:flex}
+.invoice .inv-mid,.invoice .inv-date,.invoice .inv-bottom{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.invoice .inv-date{display:grid}.invoice .inv-date>div:last-child{padding-left:0}
+.invoice .inv-bank,.invoice .inv-bank div{color:var(--inv-dark)}.invoice .inv-bank{width:70%;min-width:200px}.invoice .inv-bank strong{display:block;margin-bottom:4px}
+.invoice .inv-grand{clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%,16px 50%);padding:14px 34px 14px 30px}
+@media(max-width:640px){.invoice{--tip:8px}.invoice .inv-row{grid-template-columns:minmax(0,1fr) 34px 84px 92px}.invoice .inv-row>div{padding:6px 12px 6px 8px;min-height:34px}.invoice .inv-row>div+div{padding-left:12px;margin-left:-4px}.invoice .inv-mid,.invoice .inv-date,.invoice .inv-bottom{grid-template-columns:1fr}.invoice .inv-bank{width:100%}}
+.invoice .inv-row{align-items:stretch}
+
+.shift-others{font-size:13px;color:var(--ink-soft);margin:-6px 0 14px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}.shift-others span{display:inline-flex;gap:6px;align-items:center}
+
+.amt-in{color:#1f7a4d;font-weight:700}.amt-out{color:#a63a3a;font-weight:700}
