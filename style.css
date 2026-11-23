@@ -376,3 +376,6 @@ dialog.modal{border:0;border-radius:20px;padding:0;width:min(560px,94vw);max-hei
 .gal-grid figure{margin:0;display:grid;gap:6px}
 .gal-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;display:block;background:#e8f0f1}
 .tx-photos{margin:10px 0}
+.portal-link{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin:12px 0 18px}
+.portal-link label{flex:1 1 280px}
+.portal-link input{width:100%}
