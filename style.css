@@ -341,3 +341,11 @@ dialog.modal{border:0;border-radius:20px;padding:0;width:min(560px,94vw);max-hei
 .shift-others{font-size:13px;color:var(--ink-soft);margin:-6px 0 14px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}.shift-others span{display:inline-flex;gap:6px;align-items:center}
 
 .amt-in{color:#1f7a4d;font-weight:700}.amt-out{color:#a63a3a;font-weight:700}
+
+/* Diskon / ubah harga di kasir */
+.cart-adjust{display:flex;gap:8px;flex-wrap:wrap;grid-column:1/-1}
+.cart-adjust input{flex:1 1 150px;min-width:0}
+.spv-box{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;border:1px solid #f0c36d;background:#fff8e6;border-radius:10px}
+.spv-box[hidden]{display:none}
+.spv-box strong{grid-column:1/-1}
+@media(max-width:640px){.spv-box{grid-template-columns:1fr}}
