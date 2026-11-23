@@ -361,3 +361,18 @@ dialog.modal{border:0;border-radius:20px;padding:0;width:min(560px,94vw);max-hei
 .cf-items{display:grid;gap:6px;max-height:34vh;overflow:auto;border-top:1px dashed #cfdde0;border-bottom:1px dashed #cfdde0;padding:10px 0}
 .cf-item{display:flex;justify-content:space-between;gap:12px}
 #confirm-dialog .cart-total{display:flex;justify-content:space-between;font-size:1.15rem}
+
+/* Galeri kunjungan */
+.photo-box{display:grid;gap:10px;padding:12px;border:1px dashed #b9d3d8;border-radius:10px;background:#f6fbfb}
+.photo-preview{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.photo-preview:empty{display:none}
+.photo-preview img{width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid #cfdde0}
+.gallery{display:grid;gap:18px}
+.gal-visit{border:1px solid #dbe8ea;border-radius:14px;padding:14px;background:#fff}
+.gal-head{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.gal-head span{color:var(--ink-soft,#4b6a72)}
+.gal-note{margin:8px 0 0;font-style:italic;color:var(--ink-soft,#4b6a72)}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:10px}
+.gal-grid figure{margin:0;display:grid;gap:6px}
+.gal-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;display:block;background:#e8f0f1}
+.tx-photos{margin:10px 0}
