@@ -358,3 +358,6 @@ dialog.modal{border:0;border-radius:20px;padding:0;width:min(560px,94vw);max-hei
 .spv-msg:empty{display:none}
 .spv-ok{flex:1 1 100%;color:#1b6b3a;font-weight:600}
 .spv-row[hidden]{display:none}
+.cf-items{display:grid;gap:6px;max-height:34vh;overflow:auto;border-top:1px dashed #cfdde0;border-bottom:1px dashed #cfdde0;padding:10px 0}
+.cf-item{display:flex;justify-content:space-between;gap:12px}
+#confirm-dialog .cart-total{display:flex;justify-content:space-between;font-size:1.15rem}
